@@ -15,7 +15,6 @@ float video(int w, int h, int durationMovie, int durationCredits, int fps, char*
     float bwFrameSize = w * h* fps*durationCredits;    // Section noir et blanc : 1 octet/pixel
     // Taille totale de la video
     float totalSize = colorFrameSize *8 + bwFrameSize*1;
-
     // Conversion en fonction de l'unité
     if (strcmp(unit, "bt") == 0) {
         return totalSize / 8; // Convertir en octets
